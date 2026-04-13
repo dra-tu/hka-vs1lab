@@ -7,7 +7,6 @@
 */
 
 /* Global styling */
-
 html {
   box-sizing: border-box;
 }
@@ -15,7 +14,6 @@ html {
 * {
   margin: 0;
   padding: 0;
-
   /* This approach prevents issues with 3rd party content-box components */
   box-sizing: inherit;
 }
@@ -25,9 +23,12 @@ html {
 
 :root {
   --link-color: #00B7FF;
-  --background-color: #efefef;
+  --background-color: #f4f4f9;
+  --header-bg: #333;
+  --header-text: #fff;
   --border-color: #cdcdcd;
   --gray-color: #666;
+  --accent-color: #e7e7e7;
 }
 
 
@@ -35,13 +36,14 @@ html {
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--background-color);
 }
 
 a {
   color: var(--link-color);
+  text-decoration: none;
 }
 
 /* ### TODO ### Styles for other HTML elements */
@@ -54,84 +56,116 @@ a {
 .row {
   width: 100%;
   display: flex;
+  flex-wrap: wrap; /* Erlaubt Umbruch für Responsive */
   justify-content: space-between;
+}
+
+/* Dynamische Breitenberechnung 1 rem = 16px*/
+[class*="col-"] {
+  padding: 0.5rem;
+}
+
+.col-4 { width: 33.33%; }
+.col-6 { width: 50%; }
+.col-8 { width: 66.66%; }
+.col-12 { width: 100%; }
+
+/* Header Component */
+.header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__image {
+  height: 40px;
+}
+
+/* Main & Sections */
+.main {
   flex: 1;
+  padding: 1rem;
 }
 
-.col-1 {
-  width: calc(8.33% - 1rem);
+fieldset {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 4px;
 }
 
-.col-2 {
-  width: calc(16.66% - 1rem);
+/* Form Styling */
+.form-group {
+  margin-bottom: 1rem;
 }
 
-.col-3 {
-  width: calc(25% - 1rem);
+label {
+  display: block; /* Vertikale Anordnung */
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
 
-.col-4 {
-  width: calc(33.33% - 1rem);
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px; /* Größere Boxen */
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
 }
 
-.col-5 {
-  width: calc(41.66% - 1rem);
+.btn-submit {
+  padding: 10px 20px;
+  background-color: var(--link-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.col-6 {
-  width: calc(50% - 1rem);
+/* Discovery List */
+.discovery__results {
+  list-style: none;
 }
 
-.col-7 {
-  width: calc(58.33% - 1rem);
+.discovery__results li {
+  background-color: var(--accent-color); /* Farbige Boxen */
+  margin-bottom: 0.5rem;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 5px solid var(--link-color);
 }
 
-.col-8 {
-  width: calc(66.66% - 1rem);
+.discovery__map img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-color);
 }
 
-.col-9 {
-  width: calc(75% - 1rem);
+/* Footer Component */
+.footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
 }
 
-.col-10 {
-  width: calc(83.33% - 1rem);
+/* Media Queries für Responsive Design */
+@media (max-width: 850px) {
+  .row {
+    flex-direction: column;
+  }
+
+  /* Alle Spalten auf 100% Breite setzen */
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    width: 100%;
+  }
+  
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
 }
-
-.col-11 {
-  width: calc(91.66% - 1rem);
-}
-
-.col-12 {
-  width: calc(100% - 1rem);
-}
-
-
-/* ### TODO ### Styles for Header Component */
-
-/* ... your code here ... */
-
-
-/* ### TODO ### Styles for Main Component */
-
-/* ... your code here ... */
-
-
-/* ### TODO ### Styles for Tagging component */
-
-/* ... your code here ... */
-
-
-/* ### TODO ### Styles for Discovery component */
-
-/* ... your code here ... */
-
-
-/* ### TODO ### Styles for Footer Component */
-
-/* ... your code here ... */
-
-
-/* ### TODO ### Media Queries */
-
-/* ... your code here ... */
