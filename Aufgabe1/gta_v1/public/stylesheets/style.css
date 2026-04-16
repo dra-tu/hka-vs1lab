@@ -44,10 +44,27 @@ a {
   color: var(--link-color);
 }
 
-/* ### TODO ### Styles for other HTML elements */
+/* Styles for other HTML elements */
 
-/* ... your code here ... */
+fieldset {
+  padding: .6rem;
+  margin: .4rem;
+  display: flex;
+  gap: .3rem;
+  flex-direction: column;
+}
 
+legend {
+  font-weight: bold;
+}
+
+input {
+  padding: .5rem;
+  margin-bottom: .5rem;
+  width: 100%;
+  max-width: 25em;
+  display: block;
+}
 
 /* Grid styles (no changes required) */
 
@@ -107,31 +124,102 @@ a {
 }
 
 
-/* ### TODO ### Styles for Header Component */
+/* Styles for Header Component */
 
-/* ... your code here ... */
+.header {
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
 
-
-/* ### TODO ### Styles for Main Component */
-
-/* ... your code here ... */
-
-
-/* ### TODO ### Styles for Tagging component */
-
-/* ... your code here ... */
+.header__image {
+  height: 3rem;
+}
 
 
-/* ### TODO ### Styles for Discovery component */
+/* Styles for Main Component */
 
-/* ... your code here ... */
+.main {
+  /* flex: 10; */
+  padding: 3rem;
+}
+
+/* Styles for Tagging component */
+
+#tag-form-field input {
+  max-width: none;
+}
+
+/* Styles for Discovery component */
+
+#discov-form-lat, #discov-form-lon {
+  display: none;
+}
+
+#discoveryResults li {
+  list-style-type: none;
+  border: .1rem solid var(--border-color) ;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--background-color);
+  color: var(--link-color);
+}
+
+.discovery__wrapper {
+  padding: 1rem;
+}
+
+.discovery__map img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
 
 
-/* ### TODO ### Styles for Footer Component */
+/* Styles for Footer Component */
 
-/* ... your code here ... */
+.footer {
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
 
 
-/* ### TODO ### Media Queries */
+/* Media Queries */
 
-/* ... your code here ... */
+@media (width <= 900px)  {
+  .col-1  { width: auto; }
+  .col-2  { width: auto; }
+  .col-3  { width: auto; }
+  .col-4  { width: auto; }
+  .col-5  { width: auto; }
+  .col-6  { width: auto; }
+  .col-7  { width: auto; }
+  .col-8  { width: auto; }
+  .col-9  { width: auto; }
+  .col-10 { width: auto; }
+  .col-11 { width: auto; }
+  .col-12 { width: auto; }
+
+  input {
+    max-width: none;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .discovery__wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (width <= 410px)  {
+  .header {
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 0px;
+  }
+}
