@@ -48,6 +48,10 @@ a {
 
 /* ... your code here ... */
 
+input {
+  display: block;
+}
+
 
 /* Grid styles (no changes required) */
 
@@ -110,26 +114,84 @@ a {
 /* ### TODO ### Styles for Header Component */
 
 /* ... your code here ... */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: green;
+}
+
+.header__image {
+  width: 10%;
+}
+
 
 
 /* ### TODO ### Styles for Main Component */
 
 /* ... your code here ... */
-
+.main {
+  display: flex;
+  justify-content: space-around;
+}
 
 /* ### TODO ### Styles for Tagging component */
 
 /* ... your code here ... */
+
+.main__tagging {
+  width: 30%;
+}
+
+.tagging__fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
 
 /* ### TODO ### Styles for Discovery component */
 
 /* ... your code here ... */
 
+.main__discovery {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.discovery__search {
+  flex-grow: 2;
+}
+
+.discovery__results .box {
+  display: flex;
+}
+
+.discovery__wrapper {
+  display: flex;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* ### TODO ### Styles for Footer Component */
 
 /* ... your code here ... */
+
+.footer {
+  display: flex;
+  background-color: #999999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+}
 
 
 /* ### TODO ### Media Queries */
