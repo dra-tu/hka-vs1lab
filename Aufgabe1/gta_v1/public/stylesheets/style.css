@@ -49,7 +49,20 @@ a {
 /* ... your code here ... */
 
 input {
-  display: block;
+  padding: 10px;
+  border: 2px solid #b94a48;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+}
+
+fieldset {
+  border: 2px solid #777777;
+  padding: 10px;
+  font-size: large;
 }
 
 
@@ -119,10 +132,11 @@ input {
   align-items: center;
   justify-content: space-between;
   background-color: green;
+  margin-bottom: 20px;
 }
 
 .header__image {
-  width: 10%;
+  width: 7%;
 }
 
 
@@ -133,6 +147,7 @@ input {
 .main {
   display: flex;
   justify-content: space-around;
+  font-size:larger;
 }
 
 /* ### TODO ### Styles for Tagging component */
@@ -164,17 +179,26 @@ input {
   flex-grow: 2;
 }
 
-.discovery__results .box {
-  display: flex;
-}
-
 .discovery__wrapper {
   display: flex;
 }
 
-.map {
+.discovery__fieldset {
   display: flex;
   flex-direction: column;
+}
+
+.discovery__results {
+  list-style: none;
+  color: #129FEA;
+  background-color: lightblue;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.discovery__results li {
+  border: 2px solid #129FEA;
+  padding: 10px;
 }
 
 
@@ -189,7 +213,7 @@ input {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 10%;
+  height: 5%;
   align-items: center;
 }
 
@@ -197,3 +221,11 @@ input {
 /* ### TODO ### Media Queries */
 
 /* ... your code here ... */
+
+@media (max-width: 600px) {
+  .main {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
