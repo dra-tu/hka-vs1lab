@@ -48,6 +48,23 @@ a {
 
 /* ... your code here ... */
 
+input {
+  padding: 10px;
+  border: 2px solid #b94a48;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+}
+
+fieldset {
+  border: 2px solid #777777;
+  padding: 10px;
+  font-size: large;
+}
+
 
 /* Grid styles (no changes required) */
 
@@ -110,28 +127,95 @@ a {
 /* ### TODO ### Styles for Header Component */
 
 /* ... your code here ... */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: green;
+  margin-bottom: 20px;
+}
+
+.header__image {
+  width: 7%;
+}
+
 
 
 /* ### TODO ### Styles for Main Component */
 
 /* ... your code here ... */
-
+.main {
+  justify-content: space-around;
+  font-size:larger;
+}
 
 /* ### TODO ### Styles for Tagging component */
 
 /* ... your code here ... */
+
+.tagging__fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
 
 /* ### TODO ### Styles for Discovery component */
 
 /* ... your code here ... */
 
+.main__discovery {
+  flex-direction: column;
+}
+
+.discovery__search {
+  flex-grow: 2;
+}
+
+.discovery__wrapper {
+  display: flex;
+}
+
+.discovery__fieldset {
+  flex-direction: column;
+}
+
+.discovery__results {
+  list-style: none;
+  color: #129FEA;
+  background-color: lightblue;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.discovery__results li {
+  border: 2px solid #129FEA;
+  padding: 10px;
+}
+
 
 /* ### TODO ### Styles for Footer Component */
 
 /* ... your code here ... */
 
+.footer {
+  background-color: #999999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 5%;
+  align-items: center;
+}
+
 
 /* ### TODO ### Media Queries */
 
 /* ... your code here ... */
+
+@media (max-width: 600px) {
+  .main {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
